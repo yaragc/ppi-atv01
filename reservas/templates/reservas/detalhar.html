@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block center %}
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col m-4">
+        <img src="{{ reservas.imagem.url }}" width="400px" height="400px" alt="">
+      </div>
+      
+
+      <div class="col m-4 text-center">
+        <br><br><br><br>
+        <p><strong>Cnpj: </strong>{{reservas.cnpj}}</p>
+        <p><strong>Nome da empresa: </strong>{{reservas.nome_empresa}}</p>
+        <p><strong>Nome da categoria: </strong>{{reservas.categoria_empresa}}</p>
+        <p><strong>Localização: </strong>{{reservas.localizacao}}</p>
+        <p><strong>Valor: </strong>{{reservas.valor}}</p>
+
+        <br><br><br><br><br><br><br><br>
+
+        <a href="{% url 'listar' %}" class="btn btn-secondary">Voltar</a>
+        <a href="{% url 'editar' id=reservas.id %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'apagar' id=reservas.id %}" class="btn btn-danger">Apagar</a>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

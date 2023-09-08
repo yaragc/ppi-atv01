@@ -1,0 +1,28 @@
+a{
+    text-decoration: none;
+}
+.span{
+    color: #50067a;
+}
+body{
+    background-color: #ffffff;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} 
+
+footer {
+    background-color: #50067a;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    position: fixed;
+    bottom: 0;
+}
+
+.reserfine{
+    color: #ffffff;
+}

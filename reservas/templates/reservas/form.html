@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block center %}
+<br>
+<h4 class="text-center mb-3">Formulário para cadastro de Reservas</h4>
+<hr>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- 1 of 3 -->
+      </div>
+      <div class="col-6 mb-3">
+        
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label "><strong>Cnpj</strong></label>
+                {{form.cnpj}}
+              </div>
+            
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Nome da empresa</strong></label>
+                {{form.nome_empresa}}
+              </div>
+            
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Categoria da empresa</strong></label>
+                {{ form.categoria_empresa }}
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Localização</strong></label>
+                {{ form.localizacao }}
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Valor</strong></label>
+                {{ form.valor }}
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"><strong>Imagem</strong></label>
+                {{ form.imagem }}
+              </div>
+            
+              <div class="text-center m-4">
+
+            
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+            <a href="{% url 'listar' %}" class="btn btn-secondary">Voltar</a>
+            </div>
+
+        </form>
+
+
+
+      </div>
+      <div class="col">
+        <!-- 3 of 3 -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <!-- 1 of 3 -->
+      </div>
+      <div class="col-5">
+        <!-- 2 of 3 (wider) -->
+      </div>
+      <div class="col">
+        <!-- 3 of 3 -->
+      </div>
+    </div>
+  </div>
+    
+ 
+
+
+
+{% endblock %}

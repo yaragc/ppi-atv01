@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block center %}
+
+<h3 class="m-4 text-center">Listagem</h3>
+
+
+<body>
+<hr>
+    <div class="container text-center">
+   
+       <div class="row row-cols-2 mt-3">
+
+        {% for reserva in  reservas %}
+
+      
+             <div class="col-md-4">
+   
+         <div class="m-5">
+
+
+            <div class="card" style="width: 18rem;">
+              <img src="{{ reserva.imagem.url}}">
+                <div class="card-body">
+                  <h5 class="card-title">Nome da empresa: <strong>{{ reserva.nome_empresa }}</strong></h5>
+                  <p class="card-text"></p>
+                  <a href="{% url 'detalhar' id=reserva.id %}" class="btn btn-secondary">detalhar</a>
+                </div>
+              </div>
+    
+       
+</div>
+             </div>
+            
+         {% endfor %}
+     </div>
+   </div>
+   <hr>
+
+       </body>
+
+
+  {% endblock %}
